@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "dockercontainer" {
+resource "aws_s3_bucket" "dockercontainer1" {
  bucket = "dockercontainer1"
  tags = {
    Name = "DockerContainer2"
