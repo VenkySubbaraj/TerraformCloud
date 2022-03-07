@@ -1,11 +1,11 @@
 resource "aws_s3_bucket" "dockercontainer" {
- bucket = "dockercontainer1"
+ bucket = var.s3_bucket_name
  tags = {
-   Name = "DockerContainer2"
+   Name = var.tag_name
  }
 }
 
 resource "aws_s3_bucket_acl" "dockercontainer_acl" {
  bucket = aws_s3_bucket.dockercontainer.id
- acl = "private"
+ acl = var.acl_value
 }
