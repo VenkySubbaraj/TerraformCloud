@@ -12,7 +12,7 @@ terraform {
     organization = "hashicorpvenkat"
     
     workspace {
-      name = "gh-actions-demo"
+      name = "TerraformCloud"
     }
   }
 }
