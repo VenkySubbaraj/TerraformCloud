@@ -1,16 +1,9 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "registry.terraform.io/hashicorp/aws"
-    }
-    random = {
-      source = "hashicorp/random"
-    }
-  }
-  
+  provider "aws" {
+    region = "us-west-2"
+  }  
   cloud {
     organization = "hashicorpvenkat"
-    
     workspaces {
       name = "TerraformCloud"
     }
