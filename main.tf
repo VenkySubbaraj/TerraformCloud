@@ -30,8 +30,10 @@ resource "aws_lambda_permission" "allow_cloudwatch" {
 }
 
 resource "aws_lambda_function" "terraform_func" {
+filename                       = "python"
 function_name                  = "terraformcode"
 role                           = "arn:aws:iam::780467203909:role/service-role/function-role-6fqhdy6g"
 handler                        = "lambda_handler"
 runtime                        = "python3.7"
+timeout                        = "180"
 }
