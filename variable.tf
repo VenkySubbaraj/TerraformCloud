@@ -1,9 +1,9 @@
 variable "s3_bucket_name" {
- default = "dockerContainer1"
+ default = "dockercontainer1"
 }
 
 variable "tag_name" {
- default = "dockerContainer1"
+ default = "dockercontainer1"
 }
 
 variable "acl_value" {
