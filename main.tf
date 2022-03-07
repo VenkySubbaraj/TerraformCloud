@@ -36,4 +36,10 @@ role                           = "arn:aws:iam::780467203909:role/service-role/fu
 handler                        = "lambda_handler"
 runtime                        = "python3.7"
 timeout                        = "180"
+vpc_config {
+ subnet_ids = ["default"]
+ security_group_ids = ["default"]
 }
+}
+
+
