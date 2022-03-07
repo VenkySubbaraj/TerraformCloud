@@ -21,3 +21,10 @@ resource "aws_cloudwatch_event_target" "sns" {
   rule      = aws_cloudwatch_event_rule.console.name
   arn       = "arn:aws:lambda:ap-south-1:780467203909:function:function"
 }
+
+resource "aws_lambda_permission" "allow_cloudwatch" {
+  statement_id  = "AllowExecutionFromCloudWatch"
+  action        = "lambda:InvokeFunction"
+  function_name = "function"
+  principal     = "events.amazonaws.com"
+}
