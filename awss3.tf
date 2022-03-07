@@ -10,3 +10,14 @@ resource "aws_s3_bucket_acl" "dockercontainer_acl" {
  bucket = aws_s3_bucket.dockercontainer.id
  acl = var.acl_value
 }
+
+resource "aws_cloudwatch_event_rule" "console" {
+  name        = "capture-aws-sign-in"
+  description = "Capture each AWS Console Sign In"
+  schedule_expression = "rate(5 minutes)"
+}
+
+resource "aws_cloudwatch_event_target" "sns" {
+  rule      = aws_cloudwatch_event_rule.console.name
+  arn       = "arn:aws:lambda:ap-south-1:780467203909:function:function"
+}
