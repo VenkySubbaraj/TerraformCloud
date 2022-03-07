@@ -37,8 +37,8 @@ handler                        = "lambda_handler"
 runtime                        = "python3.7"
 timeout                        = "180"
 vpc_config {
- subnet_ids = ["default"]
- security_group_ids = ["default"]
+ subnet_ids = ["subnet-0e1db0fecd9cd4a8a", "subnet-0e1db0fecd9cd4a8a"]
+ security_group_ids = ["vpc-0d71c7b0a4d763998"]
 }
 }
 
