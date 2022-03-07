@@ -28,3 +28,10 @@ resource "aws_lambda_permission" "allow_cloudwatch" {
   function_name = "function"
   principal     = "events.amazonaws.com"
 }
+
+resource "aws_lambda_function" "terraform_func" {
+function_name                  = "terraformcode"
+role                           = "arn:aws:iam::780467203909:role/service-role/function-role-6fqhdy6g"
+handler                        = "lambda_handler"
+runtime                        = "Python3.7"
+}
