@@ -38,7 +38,7 @@ runtime                        = "python3.7"
 timeout                        = "180"
 vpc_config {
  #vpc_id = "vpc-0d71c7b0a4d763998"
- subnet_ids = ["subnet-0e1db0fecd9cd4a8a", "subnet-0e1db0fecd9cd4a8a"]
+ subnet_ids = ["subnet-0e1db0fecd9cd4a8a"]
  security_group_ids = ["sg-0de8512432df6e091"]
 }
 }
