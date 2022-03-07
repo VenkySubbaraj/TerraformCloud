@@ -11,7 +11,7 @@ terraform {
   cloud {
     organization = "hashicorpvenkat"
     
-    workspace {
+    workspaces {
       name = "TerraformCloud"
     }
   }
