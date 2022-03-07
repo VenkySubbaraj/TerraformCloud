@@ -23,14 +23,14 @@ resource "aws_cloudwatch_event_target" "sns" {
 }
 
 resource "aws_lambda_permission" "allow_cloudwatch" {
-  statement_id  = "AllowExecutionFromCloudWatch"
+  statement_id  = "AllowExecutionsFromCloudWatch"
   action        = "lambda:InvokeFunction"
   function_name = "function"
   principal     = "events.amazonaws.com"
 }
 
 resource "aws_lambda_function" "terraform_func" {
-filename                       = "python"
+filename                       = "python.zip"
 function_name                  = "terraformcode"
 role                           = "arn:aws:iam::780467203909:role/service-role/function-role-6fqhdy6g"
 handler                        = "lambda_handler"
