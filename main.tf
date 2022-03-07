@@ -11,23 +11,23 @@
 # acl = var.acl_value
 #}
 
-resource "aws_cloudwatch_event_rule" "console" {
-  name        = "capture-aws-sign-in"
-  description = "Capture each AWS Console Sign In"
-  schedule_expression = "rate(5 minutes)"
-}
+#resource "aws_cloudwatch_event_rule" "console" {
+#  name        = "capture-aws-sign-in"
+#  description = "Capture each AWS Console Sign In"
+#  schedule_expression = "rate(5 minutes)"
+#}
 
-resource "aws_cloudwatch_event_target" "sns" {
-  rule      = aws_cloudwatch_event_rule.console.name
-  arn       = "arn:aws:lambda:ap-south-1:780467203909:function:function"
-}
+#resource "aws_cloudwatch_event_target" "sns" {
+#  rule      = aws_cloudwatch_event_rule.console.name
+#  arn       = "arn:aws:lambda:ap-south-1:780467203909:function:function"
+#}
 
-resource "aws_lambda_permission" "allow_cloudwatch" {
-  statement_id  = "AllowExecutionsFromCloudWatch"
-  action        = "lambda:InvokeFunction"
-  function_name = "function"
-  principal     = "events.amazonaws.com"
-}
+#resource "aws_lambda_permission" "allow_cloudwatch" {
+#  statement_id  = "AllowExecutionsFromCloudWatch"
+#  action        = "lambda:InvokeFunction"
+#  function_name = "function"
+#  principal     = "events.amazonaws.com"
+#}
 
 resource "aws_lambda_function" "terraform_func" {
 filename                       = "python.zip"
