@@ -1,11 +1,3 @@
-variable "s3_bucket_name" {
- default = "dockercontainer2"
-}
-
-variable "tag_name" {
- default = "dockercontainer2"
-}
-
-variable "acl_value" {
- default = "private"
-}
+variable "s3_bucket_name" {}
+variable "tag_name" {}
+variable "acl_value" {}
