@@ -44,3 +44,11 @@ vpc_config {
 }
 
 
+data "aws_s3_bucket" "bucket" {
+  bucket = "dockercontainer1"
+}
+
+resource "aws_s3_bucket_policy" "cross-account" {
+  bucket = aws_s3_bucket.bucket.id
+  policy = file("./policies/account.json")
+}

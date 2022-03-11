@@ -1,0 +1,20 @@
+{
+  "Id": "Policy1647021515810",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1647021512521",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucketVersions"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::dockercontainer1",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::837058538376:root"
+        ]
+      }
+    }
+  ]
+}
