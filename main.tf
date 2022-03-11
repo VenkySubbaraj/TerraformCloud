@@ -49,6 +49,6 @@ data "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_s3_bucket_policy" "cross-account" {
-  bucket = aws_s3_bucket.bucket.id
+  bucket = data.aws_s3_bucket.bucket.id
   policy = file("./policies/account.json")
 }
