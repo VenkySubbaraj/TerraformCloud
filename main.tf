@@ -52,3 +52,8 @@ resource "aws_s3_bucket_policy" "cross-account" {
   bucket = data.aws_s3_bucket.bucket.id
   policy = file("./policies/account.json")
 }
+
+output "docker_value" {
+  value = data.aws_s3_bucket.bucket.id
+}
+
