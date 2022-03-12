@@ -9,7 +9,7 @@
         "s3:ListBucketVersions"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::dockercontainer1",
+      "Resource": "arn:aws:s3:::dockercontainer1/*",
       "Principal": {
         "AWS": [
           "arn:aws:iam::837058538376:root"
