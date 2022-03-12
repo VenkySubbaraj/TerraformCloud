@@ -48,3 +48,15 @@ resource "aws_iam_role" "test_role" {
   name = "s3_roles"
   assume_role_policy = file("${path.module}/policies/role.json")
 }
+
+resource "aws_iam_policy" "policy_creation" {
+  name = "s3_cross_account_policy"
+  path = "/"
+  policy = file("${path.module}/policies/account.json")
+}
+
+resource "aws_iam_policy_attachment" "policy_attachement" {
+  role = aws_iam_role.test_role.name
+  policy_arn = aws_iam_policy.policy_creation.arn
+}
+
