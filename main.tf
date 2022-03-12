@@ -29,19 +29,19 @@
 #  principal     = "events.amazonaws.com"
 #}
 
-resource "aws_lambda_function" "terraform_func" {
-filename                       = "python.zip"
-function_name                  = "terraformcode"
-role                           = "arn:aws:iam::780467203909:role/service-role/function-role-6fqhdy6g"
-handler                        = "lambda_handler"
-runtime                        = "python3.7"
-timeout                        = "180"
-vpc_config {
+#resource "aws_lambda_function" "terraform_func" {
+#filename                       = "python.zip"
+#function_name                  = "terraformcode"
+#role                           = "arn:aws:iam::780467203909:role/service-role/function-role-6fqhdy6g"
+#handler                        = "lambda_handler"
+#runtime                        = "python3.7"
+#timeout                        = "180"
+#vpc_config {
  #vpc_id = "vpc-0d71c7b0a4d763998"
- subnet_ids = ["subnet-0e1db0fecd9cd4a8a"]
- security_group_ids = ["sg-0de8512432df6e091"]
-}
-}
+# subnet_ids = ["subnet-0e1db0fecd9cd4a8a"]
+# security_group_ids = ["sg-0de8512432df6e091"]
+#}
+#}
 
 
 data "aws_s3_bucket" "bucket" {
