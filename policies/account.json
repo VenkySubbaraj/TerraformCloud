@@ -6,10 +6,13 @@
       "Sid": "Stmt1647021512521",
       "Action": [
         "s3:GetObject",
-        "s3:ListBucketVersions"
+        "s3:ListBucket"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::dockercontainer1/*",
+      "Resource": [
+        "arn:aws:s3:::dockercontainer1",
+        "arn:aws:s3:::dockercontainer1/*"
+      ]
       "Principal": {
         "AWS": [
           "arn:aws:iam::837058538376:root"
