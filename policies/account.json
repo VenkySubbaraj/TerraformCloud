@@ -27,4 +27,3 @@
             "Resource": "arn:aws:s3:::dockercontainer1/*"
         }
     ]
-}
