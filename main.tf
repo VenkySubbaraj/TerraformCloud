@@ -56,7 +56,8 @@ resource "aws_iam_policy" "policy_creation" {
 }
 
 resource "aws_iam_policy_attachment" "policy_attachement" {
-  role = aws_iam_role.test_role.name
+  name = "policy_attachement"
+  roles = aws_iam_role.test_role.name
   policy_arn = aws_iam_policy.policy_creation.arn
 }
 
