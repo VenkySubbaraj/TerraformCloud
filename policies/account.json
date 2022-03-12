@@ -1,20 +1,30 @@
 {
-  "Id": "Policy1647021515810",
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1647021512521",
-      "Action": [
-        "s3:GetObject",
-        "s3:ListBucketVersions"
-      ],
-      "Effect": "Allow",
-      "Resource": "arn:aws:s3:::dockercontainer1",
-      "Principal": {
-        "AWS": [
-          "arn:aws:iam::837058538376:root"
-        ]
-      }
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::dockercontainer1"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::dockercontainer1/*"
+        }
+    ]
 }

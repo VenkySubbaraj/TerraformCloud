@@ -44,16 +44,7 @@
 #}
 
 
-data "aws_s3_bucket" "bucket" {
-  bucket = "dockercontainer1"
+resource "aws_iam_role" "test_role" {
+  name = "s3_roles"
+  assume_role_policy = file("${path.module}/policies/role.json")
 }
-
-resource "aws_s3_bucket_policy" "cross-account" {
-  bucket = data.aws_s3_bucket.bucket.id
-  policy = file("./policies/account.json")
-}
-
-output "docker_value" {
-  value = data.aws_s3_bucket.bucket.id
-}
-
