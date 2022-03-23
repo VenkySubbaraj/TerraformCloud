@@ -6,8 +6,8 @@ module "sns" {
   source = "./modules/sns"
 }
 
-module "kms_alias" {
-  source = "./modules/kms_alias"
+module "kms_key" {
+  source = "./modules/kms_key"
 }
 
 module "App_runner" {
