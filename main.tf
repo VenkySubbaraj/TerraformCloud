@@ -10,6 +10,6 @@ module "kms_alias" {
   source = "./modules/kms_alias"
 }
 
-modules "App_runner" {
+module "App_runner" {
  source = "./modules/App_runner"
 }
