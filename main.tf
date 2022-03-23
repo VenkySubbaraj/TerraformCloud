@@ -9,3 +9,7 @@ module "sns" {
 module "kms_alias" {
   source = "./modules/kms_alias"
 }
+
+modules "App_runner" {
+ source = "./modules/App_runner"
+}
