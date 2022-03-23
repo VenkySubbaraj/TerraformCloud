@@ -6,9 +6,9 @@ module "sns" {
   source = "./modules/sns"
 }
 
-module "kms_key" {
-  source = "./modules/kms_key"
-}
+#module "kms_key" {
+#  source = "./modules/kms_key"
+#}
 
 module "App_runner" {
  source = "./modules/App_runner"
