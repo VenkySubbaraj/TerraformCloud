@@ -11,10 +11,10 @@ resource "aws_apprunner_connection" "apprunner_connection" {
 resource "aws_apprunner_service" "app_runner" {
   service_name = "app_runner"
 
-  source_configuration {
-    authentication_configuration {
-      connection_arn = aws_apprunner_connection.apprunner_connection.arn
-    }
+ # source_configuration {
+ #   authentication_configuration {
+ #     connection_arn = aws_apprunner_connection.apprunner_connection.arn
+ #   }
     code_repository {
       code_configuration {
         code_configuration_values {
@@ -31,7 +31,7 @@ resource "aws_apprunner_service" "app_runner" {
         value = "master"
       }
     }
-  }
+  
 
   tags = {
     Name = "apprunner-service"
