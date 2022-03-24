@@ -1,10 +1,10 @@
 provider "aws" {
- alias = "us_west_2"
- region = "us-west-2"
+ alias = "us_east_1"
+ region = "us-east-1"
 }
 
 resource "aws_ecrpublic_repository" "public_repo" {
- provider = aws.us_west_2
+ provider = aws.us_east_1
  repository_name = "publicrepo"
 
 catalog_data {
