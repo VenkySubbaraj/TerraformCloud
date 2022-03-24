@@ -1,3 +1,4 @@
+
 # resource "aws_apprunner_connection" "apprunner_connection" {
 #   connection_name = "apprunner_connection"
 #   provider_type   = "GITHUB"
@@ -43,7 +44,7 @@ resource "aws_apprunner_service" "ECR-repo" {
  source_configuration {
    image_repository {
      image_configuration { 
-        port = "8000"
+        port = "80"
      }
      image_identifier = "public.ecr.aws/e3n8w8r2/publicrepo:latest"
      image_repository_type = "ECR_PUBLIC"
