@@ -18,4 +18,3 @@ module "ECR_PublicRepo" {
  source = "./modules/ECR_PublicRepo"
 }
 
- 
