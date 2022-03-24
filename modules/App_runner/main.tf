@@ -48,6 +48,7 @@ resource "aws_apprunner_service" "ECR-repo" {
      image_identifier = "public.ecr.aws/e3n8w8r2/venkat:latest"
      image_repository_type = "ECR_PUBLIC"
     }
+     auto_deployments_enabled = false
    }
  tags = {
    Name = "example-apprunner-service"
