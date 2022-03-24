@@ -17,10 +17,10 @@ resource "aws_apprunner_service" "app_runner" {
     code_repository {
       code_configuration {
         code_configuration_values {
-          build_command = "python setup.py develop"
+          build_command = "python pip install -r requirements.txt"
           port          = "8000"
           runtime       = "PYTHON_3"
-          start_command = "python runapp.py"
+          start_command = "python app.py"
         }
         configuration_source = "API"
       }
