@@ -17,3 +17,4 @@ module "App_runner" {
 module "ECR_PublicRepo" {
  source = "./modules/ECR_PublicRepo"
 }
+
