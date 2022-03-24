@@ -43,7 +43,7 @@ resource "aws_apprunner_service" "ECR-repo" {
  source_configuration {
    image_repository {
      image_configuration { 
-        port = "8080"
+        port = "8000"
      }
      image_identifier = "public.ecr.aws/e3n8w8r2/venkat:latest"
      image_repository_type = "ECR_PUBLIC"
