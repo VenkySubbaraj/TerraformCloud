@@ -49,7 +49,7 @@ resource "aws_apprunner_service" "ECR-repo" {
      image_repository_type = "ECR_PUBLIC"
     }
    }
-
+     auto_deployments_enabled = false 
  tags = {
    Name = "example-apprunner-service"
 }
