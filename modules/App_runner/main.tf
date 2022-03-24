@@ -37,6 +37,25 @@ resource "aws_apprunner_connection" "apprunner_connection" {
 #  }
 }
 
+resource "aws_apprunner_service" "ECR-repo" {
+ service_name = "ECR-repo"
+ 
+ source_configuration {
+   image_repository {
+     image_configuration { 
+        port = "8000"
+     }
+     image_identifier = "public.ecr.aws/e3n8w8r2/venkat:latest"
+     image_repository_type = "ECR_PUBLIC"
+    }
+   }
+
+ tags = {
+   Name = "example-apprunner-service"
+}
+}
+
+
 output "arnvalue" {
   value = aws_apprunner_connection.apprunner_connection.arn 
 }
