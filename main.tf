@@ -13,4 +13,3 @@ module "sns" {
 module "App_runner" {
  source = "./modules/App_runner"
 }
-
