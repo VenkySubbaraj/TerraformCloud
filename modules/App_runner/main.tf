@@ -56,6 +56,6 @@ resource "aws_apprunner_service" "ECR-repo" {
 }
 
 
-output "arnvalue" {
-  value = aws_apprunner_connection.apprunner_connection.arn 
-}
+#output "arnvalue" {
+#  value = aws_apprunner_connection.apprunner_connection.arn 
+#}
