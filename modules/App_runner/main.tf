@@ -1,11 +1,11 @@
-resource "aws_apprunner_connection" "apprunner_connection" {
-  connection_name = "apprunner_connection"
-  provider_type   = "GITHUB"
+# resource "aws_apprunner_connection" "apprunner_connection" {
+#   connection_name = "apprunner_connection"
+#   provider_type   = "GITHUB"
 
-  tags = {
-    Name = "apprunner-connection"
-  }
-}
+#   tags = {
+#     Name = "apprunner-connection"
+#   }
+# }
 
 #resource "aws_apprunner_service" "app_runner" {
 #  service_name = "app_runner"
