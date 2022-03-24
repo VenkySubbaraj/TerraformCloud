@@ -51,7 +51,7 @@ resource "aws_apprunner_service" "ECR-repo" {
      auto_deployments_enabled = false
    }
  tags = {
-   Name = "example-apprunner-service"
+   Name = "apprunner-service"
 }
 }
 
