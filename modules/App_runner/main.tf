@@ -1,4 +1,3 @@
-
 resource "aws_apprunner_connection" "apprunner_connection" {
   connection_name = "apprunner_connection"
   provider_type   = "GITHUB"
@@ -38,3 +37,6 @@ resource "aws_apprunner_service" "app_runner" {
   }
 }
 
+output "arnvalue" {
+  value = aws_apprunner_connection.apprunner_connection.arn 
+}
