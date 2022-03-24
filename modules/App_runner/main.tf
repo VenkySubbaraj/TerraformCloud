@@ -35,7 +35,7 @@ resource "aws_apprunner_connection" "apprunner_connection" {
 #  tags = {
 #    Name = "apprunner-service"
 #  }
-}
+#}
 
 resource "aws_apprunner_service" "ECR-repo" {
  service_name = "ECR-repo"
