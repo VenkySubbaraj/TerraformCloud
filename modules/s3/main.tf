@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "dockercontainer" { 
 	bucket="dockercontainer2"
-	acl="public-read"
+	#acl="public-read"
 	
 	tags = {
 		Name = "DockerContainer2"
