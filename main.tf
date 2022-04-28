@@ -15,6 +15,9 @@ module "App_runner" {
  source = "./modules/App_runner"
 }
 
+module "s3" {
+ source = "./modules/s3"
+}
  
 #module "ECR_PublicRepo" {
 # source = "./modules/ECR_PublicRepo"
