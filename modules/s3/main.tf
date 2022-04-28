@@ -5,11 +5,26 @@ resource "aws_s3_bucket" "dockercontainer" {
 	tags = {
 		Name = "DockerContainer2"
 	}
-	lifecycle_rule {
-            id = "log"
-	    enabled = true
-	expiration {
-	    days = 90
-	}
-	}
+# 	lifecycle_rule {
+#             id = "log"
+# 	    enabled = true
+# 	expiration {
+# 	    days = 90
+# 	}
+# 	}
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "example" {
+  bucket = aws_s3_bucket.bucket.id
+
+  rule {
+    id = "rule-1"
+
+    # ... other transition/expiration actions ...
+
+    status = "Enabled"
+    expiration {
+      days = 90
+    }
+  }
 }
