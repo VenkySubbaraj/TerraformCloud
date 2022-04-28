@@ -15,8 +15,7 @@ resource "aws_s3_bucket" "dockercontainer" {
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "example" {
-  bucket = aws_s3_bucket.bucket.id
-
+  bucket = dockercontainer2
   rule {
     id = "rule-1"
 
