@@ -8,8 +8,7 @@ resource "aws_glue_catalog_table" "example" {
 
   storage_descriptor {
     columns {
-      name = file("${path.module}/requirement.txt")
-      enabled = true
+      name = join("/n", tolist(lookup[local.column_data]))
       type = "string"
     }
   }
