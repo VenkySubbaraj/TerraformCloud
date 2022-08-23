@@ -8,9 +8,9 @@ resource "aws_glue_catalog_table" "example" {
 
   storage_descriptor {
     columns {
-      count = 500
-      name = local.column_data.count[index]
+      name = local.column_data
       type = "string"
+      enabled = true
     }
   }
 }
