@@ -19,12 +19,12 @@ locals {
     # column_data_read = [ for i in column_data: ]
 }
 
-locals {
-  columns = flatten(local.column_data)
-}
+# locals {
+#   columns = flatten(local.column_data)
+# }
 
 output "column_data_identification"{
-    value = local.columns
+    value = local.column_data
 }
 
 resource "aws_lakeformation_permissions" "example" {
