@@ -39,7 +39,7 @@ resource "aws_lakeformation_permissions" "example" {
   table_with_columns {
     database_name = aws_glue_catalog_table.example.database_name
     name          = aws_glue_catalog_table.example.name
-    column_names  = [local.column_data]
+    column_names  = ["${local.column_data}"]
     wildcard = true
   }
 }
