@@ -19,9 +19,14 @@ locals {
     # column_data_read = [ for i in column_data: ]
 }
 
-# locals {
-#   columns = flatten(local.column_data)
-# }
+locals {
+  columns = flatten(local.column_data)
+}
+
+output "column_data_identification_flattern"{
+    value = local.columns
+}
+
 
 output "column_data_identification"{
     value = local.column_data
