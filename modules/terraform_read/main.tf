@@ -29,7 +29,7 @@ output "column_data_identification"{
 
 resource "aws_lakeformation_permissions" "example" {
   permissions = ["SELECT"]
-  principal   = "arn:aws:iam:ap-south-1:780467203909:user/*"
+  principal   = "arn:aws:iam::780467203909:user/venkat"
 
   table_with_columns {
     database_name = aws_glue_catalog_table.example.database_name
