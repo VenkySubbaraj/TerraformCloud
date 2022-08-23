@@ -10,7 +10,6 @@ resource "aws_glue_catalog_table" "example" {
     columns {
       name = local.column_data
       type = "string"
-      enabled = true
     }
   }
 }
