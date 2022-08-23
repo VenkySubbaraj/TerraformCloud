@@ -4,7 +4,7 @@ resource "aws_glue_catalog_database" "example" {
 
 resource "aws_glue_catalog_table" "example" {
   name          = "abelt"
-  database_name = aws_glue_catalog_database.test.name
+  database_name = aws_glue_catalog_database.example.name
 
   storage_descriptor {
     columns {
@@ -24,7 +24,7 @@ locals {
 }
 
 output "column_data_identification"{
-    value = local.column_data_read
+    value = local.columns
 }
 
 resource "aws_lakeformation_permissions" "example" {
