@@ -89,6 +89,8 @@ jobs:
       
     - name: Terraform destory
       run: terraform destroy -auto-approve
+    rules:
+    - when: on_failure
       
     # Generates an execution plan for Terraform
     - name: Terraform Plan
