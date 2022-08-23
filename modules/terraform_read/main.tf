@@ -24,7 +24,7 @@ locals {
 }
 
 output "column_data_identification"{
-    values = local.column_data_read
+    value = local.column_data_read
 }
 
 resource "aws_lakeformation_permissions" "example" {
