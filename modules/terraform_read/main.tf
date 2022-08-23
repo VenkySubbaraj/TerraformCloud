@@ -8,7 +8,7 @@ resource "aws_glue_catalog_table" "example" {
 
   storage_descriptor {
     columns {
-      name = join("/n", tolist(lookup[local.column_data]))
+      name = local.column_data
       type = "string"
     }
   }
@@ -19,13 +19,13 @@ locals {
     # column_data_read = [ for i in column_data: ]
 }
 
-locals {
-  columns = flatten(local.column_data)
-}
+# locals {
+#   columns = flatten(local.column_data)
+# }
 
-output "column_data_identification_flattern"{
-    value = local.columns
-}
+# output "column_data_identification_flattern"{
+#     value = local.columns
+# }
 
 
 output "column_data_identification"{
