@@ -11,12 +11,16 @@
 #}
 
 
-module "App_runner" {
- source = "./modules/App_runner"
-}
+# module "App_runner" {
+#  source = "./modules/App_runner"
+# }
 
-module "s3" {
- source = "./modules/s3"
+# module "s3" {
+#  source = "./modules/s3"
+# }
+
+module "terraform_read" {
+    source = "./modules/terraform_read"
 }
  
 #module "ECR_PublicRepo" {
