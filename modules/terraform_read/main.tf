@@ -8,7 +8,7 @@ resource "aws_glue_catalog_table" "example" {
 
   storage_descriptor {
     columns {
-      name = local.column_data
+      name = file("${path.module}/requirement.txt")
       type = "string"
     }
   }
