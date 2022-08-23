@@ -23,7 +23,7 @@ locals {
   columns = flatten(local.column_data_read)
 }
 
-output {
+output "column_data_identification"{
     values = local.column_data_read
 }
 
