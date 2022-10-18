@@ -30,7 +30,7 @@ resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
 
     columns {
       name = file("${path.module}/data.txt")
-      type = file("${path.module}/data.txt")
+      type = file("${path.module}/data2.txt")
     }
   }
 }
