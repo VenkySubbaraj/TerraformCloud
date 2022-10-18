@@ -1,11 +1,11 @@
 
 resource "aws_glue_catalog_database" "aws_glue_catalog_database" {
-  name = "MyCatalogDatabase"
+  name = "catalogdatabase"
 }
 
 resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
-  name          = "MyCatalogTable"
-  database_name = "MyCatalogDatabase"
+  name          = "catalogtable"
+  database_name = "catalogdatabase"
 
   table_type = "EXTERNAL_TABLE"
 
