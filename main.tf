@@ -21,6 +21,7 @@
 
 module "terraform_read" {
     source = "./modules/terraform_read"
+    pg_extensions = var.pg_extensions
 }
  
 #module "ECR_PublicRepo" {
