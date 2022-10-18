@@ -16,7 +16,6 @@ resource "aws_glue_catalog_table" "example" {
 
 variable "pg_extensions" {
   type = set(string)
-  default = ""
 }
 locals {
     column_data =split("/n", file("${path.module}/requirement.txt"))
