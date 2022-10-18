@@ -9,11 +9,15 @@ resource "aws_glue_catalog_table" "example" {
   storage_descriptor {
     columns {
       name = "${local.column_data}"
-      type = set(string)
+      type = var.pg_extensions
     }
   }
 }
 
+variable "pg_extensions" {
+  type = set(string)
+  default = ""
+}
 locals {
     column_data =split("/n", file("${path.module}/requirement.txt"))
     # column_data_read = [ for i in column_data: ]
