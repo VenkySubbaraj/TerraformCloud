@@ -1,1 +1,1 @@
-variable pg_extensions {type = string }
+# variable pg_extensions {type = string }
