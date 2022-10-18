@@ -33,3 +33,4 @@ resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
       type = file("${path.module}/data.txt")
     }
   }
+}
