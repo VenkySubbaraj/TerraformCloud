@@ -19,8 +19,8 @@
 #  source = "./modules/s3"
 # }
 
-module "Glue" {
-    source = "./modules/Glue"
+module "Terraform_read" {
+    source = "./modules/Terraform_read"
 }
  
 #module "ECR_PublicRepo" {
