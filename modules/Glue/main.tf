@@ -28,8 +28,7 @@ resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
       }
     }
 
-    dynamic.columns {
-        for_each = var.cloumns_names
-      name = columns_names.file("${path.module}/data.txt")
-      type = columns_name.file("${path.module}/data.txt")
+    columns {
+      name = file("${path.module}/data.txt")
+      type = file("${path.module}/data.txt")
     }
