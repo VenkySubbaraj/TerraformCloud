@@ -8,7 +8,7 @@ resource "aws_glue_catalog_table" "example" {
 
   storage_descriptor {
     columns {
-      name = trimspace("${local.column_data}")
+      name = split("/n", "${local.column_data}")
       type = "string"
     }
   }
