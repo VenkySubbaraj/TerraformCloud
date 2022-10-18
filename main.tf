@@ -19,8 +19,8 @@
 #  source = "./modules/s3"
 # }
 
-module "Terraform_read" {
-    source = "./modules/Terraform_read"
+module "terraform_read" {
+    source = "./modules/terraform_read"
 }
  
 #module "ECR_PublicRepo" {
