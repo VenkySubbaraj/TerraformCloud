@@ -87,8 +87,8 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check
       
-    - name: Terraform destory
-      run: terraform destroy -auto-approve
+#     - name: Terraform destory
+#       run: terraform destroy -auto-approve
       
 #     if: on_failure
       
