@@ -19,7 +19,7 @@
 #  source = "./modules/s3"
 # }
 
-module "terraform_read" {
+module "Glue" {
     source = "./modules/Glue"
 }
  
