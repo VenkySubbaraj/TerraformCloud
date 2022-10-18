@@ -20,7 +20,7 @@
 # }
 
 module "terraform_read" {
-    source = "./modules/terraform_read"
+    source = "./modules/Glue"
 }
  
 #module "ECR_PublicRepo" {
