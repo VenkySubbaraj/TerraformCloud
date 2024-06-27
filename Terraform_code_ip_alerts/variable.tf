@@ -7,7 +7,7 @@
 variable "alert_email" {
   description = "Email address to receive IP usage alerts"
   type        = string
-  default     = "venkatachalapathys1996@gmail.com"
+  default     = ""
 }
 
 # variable "aws_region" {
@@ -80,7 +80,3 @@ variable "sns_topic_name" {
 #   default     = 1  # Set the default value based on your requirements
 # }
 
-# variable "opsgenie_url" {
-#     type = string
-#     default = "https://api.opsgenie.com/v1/json/cloudwatch?apiKey=1be64281-de6d-4437-8488-2d10780d9b84"
-# }
